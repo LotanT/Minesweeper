@@ -34,15 +34,15 @@ function initGame() {
     gBoard = buildBoard();
     setMinesNegsCount(gBoard);
     renderBoard(gBoard);
-    // localStorage.clear()
-    var savedScores = localStorage.getItem('highscore') || '[]';
-    console.log(savedScores)
-    if(savedScores === '[]'){
-        resetScoreTable();
-        console.log(savedScores)
-    }
-    renderScores();
-    showBoardOnConsole(gBoard);
+    localStorage.clear()
+    // var savedScores = localStorage.getItem('highscore') || '[]';
+    // console.log(savedScores)
+    // if(savedScores === '[]'){
+    //     resetScoreTable();
+    //     console.log(savedScores)
+    // }
+    // renderScores();
+    // showBoardOnConsole(gBoard);
     
 }
 
@@ -113,7 +113,7 @@ function gameOver(isWon, i, j) {
     var elResBtn = document.querySelector(`.resBtn`);
     if (isWon){
     elResBtn.innerText = '😎';
-    scoreList();
+    // scoreList();
 }
     else {
         var elCell = document.querySelector(`.cell-${i}-${j}`);
