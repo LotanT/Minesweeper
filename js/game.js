@@ -6,6 +6,7 @@ const LIVE = '💚';
 // const HINT = '💡';
 
 
+
 var gRandom = [];
 var gBoard;
 var gScores = [];
@@ -33,9 +34,13 @@ function initGame() {
     gBoard = buildBoard();
     setMinesNegsCount(gBoard);
     renderBoard(gBoard);
+    var savedScores = localStorage.getItem('highscore') || '[]';
+    if(!savedScores){
+        resetScoreTable();
+    }
     renderScores();
-    // resetScoreTable();
     showBoardOnConsole(gBoard);
+    
 }
 
 function buildBoard() {
