@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sprint</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body onload="initGame()">
+    <button class="playerName" onclick="getPlayerName()">Enter your name:</button>
+    <span class="myName"></span>
+    <div class="sizeBoardBtn">
+        <button onclick="beginner()">Beginner (4*4)</button>
+        <button onclick="medium()">Medium (8*8)</button>
+        <button onclick="expert()">Expert (12*12)</button>
+    </div>
+    <div class="aboveBoard"> 
+        <span class="lives">💚💚💚</span>
+        <button class="resBtn" onclick="restartGame()">🙂</button>
+        <span class="timer">00:00</span>
+    </div>
+    <div >
+    </div>
+    <table class="center">
+        <tbody class="board"></tbody>
+    </table>
+    <div class="Utilities">
+        <button class="hints" id="hint1" onclick="hint(1,1,this,'img1')"><img id="img1" src="pic/11.png"></button>
+        <button class="hints" id="hint2" onclick="hint(1,1,this, 'img2')"><img id="img2" src="pic/11.png"></button>
+        <button class="hints" id="hint3" onclick="hint(1,1,this, 'img3')"><img id="img3" src="pic/11.png"></button>
+    </div>
+    <table class="scoreList">
+        <tbody class="list"></tbody>
+    </table>
+    <footer class = "footer">Lotan Toiw</div>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/clicks.js"></script>
+    <script src="js/bonus.js"></script>
+</body>
+
+</html>

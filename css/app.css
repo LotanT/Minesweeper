@@ -1,0 +1,131 @@
+body{
+    background-color: rosybrown;
+}
+.playerName {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.myName{
+    background-color: chocolate;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(173, 173, 173);
+    border: 2px solid black;
+    text-align: center;
+    
+}
+
+.table{
+    width: 25px;
+    height: 25px;
+    font-weight: 600;
+    padding: 0px;
+    table-layout: fixed;
+    overflow: hidden;
+    
+}
+button{
+    cursor: pointer;
+}
+
+th,
+td {
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+}
+
+.cell {
+    background-color: rgb(212, 211, 211);
+}
+
+.sizeBoardBtn {
+    text-align: center;
+    width: auto;
+    margin-top: 10;
+    margin-bottom: 10px;
+}
+
+.isShow {
+    background-color: rgb(168, 168, 168);
+    border-color: rgb(168, 168, 168) ;
+    border: 2px;
+    box-shadow: none;
+}
+
+.resBtn {
+    margin-left: 15px;
+    margin-right: 15px;
+    
+}
+.timer {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 2px;
+    background-color: khaki;
+    width: 300px;
+
+}
+
+.aboveBoard{
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.Utilities{
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+.use{
+    cursor: none;
+}
+.hints{
+    width: 15px;
+    height: 15px;
+    padding-left: 2px;
+    background-color: rgba(240, 248, 255, 0);
+    border: 0px;
+    cursor: pointer;
+    margin-top: 2px;
+    
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 50px;
+    font-weight: 900;
+
+}
+.bom{
+    background-color:  red;
+}
+
+
+
+.scoreName{
+    background-color: rgb(233, 179, 109);
+    border-width: 1px;
+    border-color: black;
+    width: 70px;
+    font-size: 10px;
+}
+.scoreScore{
+    background-color: burlywood;
+    border-width: 1px;
+    border-color: black;
+    width: 50px;
+    font-size: 10px;
+}
