@@ -10,20 +10,16 @@ function scoreList() {
     else if (gLevel.SIZE === 8) level = 'Medium';
     else level = 'Expert';
     var result = { name: gName, score: newScore, level: level };
-    var savedScores = localStorage.getItem('highscore') || '[]'; // get the score, or the initial value if empty
-    // console.log(savedScores)
-    var highscores = [...JSON.parse(savedScores), result]; // add the result
-    highscores.sort((a, b) => b.score - a.score); // sort descending
-    highscores.slice(0, 10) // take highest 5
-    highscores.sort(function (a, b) {
-        return ('' + a.score).localeCompare(b.score);
-    })
-    // console.log(highscores)
-    // console.log(result)
-    // var highscores = result;
+    var savedScores = localStorage.getItem('highscore'); 
     
-    localStorage.setItem('highscore', JSON.stringify(highscores)) // store the scores
-    // console.log(localStorage.highscore)
+    var highscores = [...JSON.parse(savedScores), result];
+    highscores.sort((a, b) => a.score - b.score);
+   
+    
+    // console.log(highscores)
+   
+
+    localStorage.setItem('highscore', JSON.stringify(highscores))
 }
 
 function renderScores() {
@@ -55,7 +51,7 @@ function renderScores() {
         strHTML += '</tr>'
     }
     var elScoreList = document.querySelector('.scoreList');
-    elScoreList.innerHTML = strHTML
+    elScoreList.innerHTML = strHTML;
 }
 
 function resetScoreTable() {
@@ -63,10 +59,10 @@ function resetScoreTable() {
     for (var j = 0; j < 5; j++) {
         highscores[j] = { name: '', score: 9999, level: 'Beginner' };
     }
-    for (var j = 5; j < 10; j++) {
+    for (j = 5; j < 10; j++) {
         highscores[j] = { name: '', score: 9999, level: 'Medium' };
     }
-    for (var j = 10; j < 15; j++) {
+    for (j = 10; j < 15; j++) {
         highscores[j] = { name: '', score: 9999, level: 'Expert' };
     }
     console.log(highscores)

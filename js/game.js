@@ -3,7 +3,6 @@ const MINE = '💣';
 const MARK = '🚩';
 const EMPTY = '';
 const LIVE = '💚';
-// const HINT = '💡';
 
 
 
@@ -34,11 +33,11 @@ function initGame() {
     gBoard = buildBoard();
     setMinesNegsCount(gBoard);
     renderBoard(gBoard);
-    // // localStorage.setItem('highscore', [])
-    // var savedScores = localStorage.getItem('highscore') || '[]';
-    // if(savedScores === '[]'){
-    // resetScoreTable();
-    // }
+    // localStorage.setItem('highscore', [])
+    var savedScores = localStorage.getItem('highscore') || '[]';
+    if(savedScores === '[]'){
+    resetScoreTable();
+    }
     renderScores();
     // showBoardOnConsole(gBoard);
 
