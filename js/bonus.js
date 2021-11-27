@@ -11,17 +11,17 @@ function scoreList() {
     else level = 'Expert';
     var result = { name: gName, score: newScore, level: level };
     var savedScores = localStorage.getItem('highscore') || '[]'; // get the score, or the initial value if empty
-    console.log(savedScores)
+    // console.log(savedScores)
     var highscores = [...JSON.parse(savedScores), result]; // add the result
     highscores.sort((a, b) => b.score - a.score); // sort descending
     highscores.slice(0, 10) // take highest 5
     highscores.sort(function (a, b) {
-        return ('' + a.score).localeCompare(b.attr);
+        return ('' + a.score).localeCompare(b.score);
     })
-    console.log(highscores)
-    console.log(result)
+    // console.log(highscores)
+    // console.log(result)
     // var highscores = result;
-
+    
     localStorage.setItem('highscore', JSON.stringify(highscores)) // store the scores
     // console.log(localStorage.highscore)
 }

@@ -37,10 +37,10 @@ function initGame() {
     // // localStorage.setItem('highscore', [])
     // var savedScores = localStorage.getItem('highscore') || '[]';
     // if(savedScores === '[]'){
-    resetScoreTable();
+    // resetScoreTable();
     // }
     renderScores();
-    showBoardOnConsole(gBoard);
+    // showBoardOnConsole(gBoard);
 
 }
 
