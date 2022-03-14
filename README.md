@@ -1,1 +1,2 @@
-# Sprint1
+# Mine sweeper
+https://lotant.github.io/Minesweeper/
